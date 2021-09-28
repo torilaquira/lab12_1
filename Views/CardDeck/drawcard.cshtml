@@ -1,0 +1,16 @@
+﻿@model Cards
+@{
+    ViewData["Title"] = "drawcard";
+}
+
+<h1>drawcard</h1>
+
+Success: @Model.success
+Remaining: @Model.remaining
+
+@foreach (Cards card in Model.cards)
+{
+    <div>
+        <a href="/home/authordetails?key=@card.cards"></a>
+    </div>
+}
